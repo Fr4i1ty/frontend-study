@@ -36,8 +36,8 @@
 ## Структура проекта
 ```
 project-root/
-├── index.html                    # Главная страница
-├── pages/                        # Остальные страницы
+├── index.html                    
+├── pages/                        
 │   ├── about.html
 │   ├── comparison.html
 │   ├── contact.html
@@ -49,10 +49,21 @@ project-root/
 │   └── videos.html
 ├── assets/
 │   ├── css/
-│   │   ├── styles-min.css        # Минифицированный общий CSS (Chota + кастомные стили)
-│   │   └── chota.css             # Исходный фреймворк (не подключён, для ознакомления)
-│   └── img/                      # Изображения (включая WebP и PNG)
-├── components/                   # Веб-компоненты
+│   │   ├── styles-min.css
+    │   ├── app.css
+│   │   └── chota.css             
+│   └── img/
+│       ├── mongodb-logo.png
+│       ├── mongodb-logo.webp
+│       ├── mysql-logo.png
+│       ├── mysql-logo.webp
+│       ├── postgresql-logo.png
+│       ├── postgresql-logo.webp
+│       ├── redis-logo.png
+│       ├── redis-logo.webp
+│       ├── supabase-logo.png
+│       └── supabase-logo.webp             
+├── components/                   
 │   ├── app-navbar.js / app-navbar-min.js
 │   ├── app-footer.js / app-footer-min.js
 │   ├── app-modal.js / app-modal-min.js
