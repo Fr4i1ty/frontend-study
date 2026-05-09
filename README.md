@@ -34,29 +34,30 @@
 Никаких зависимостей и сборщиков не требуется – проект работает на чистом HTML/CSS/JS.
 
 ## Структура проекта
-
+```
 project-root/
-├── index.html # Главная страница
-├── pages/ # Остальные страницы
-│ ├── about.html
-│ ├── comparison.html
-│ ├── contact.html
-│ ├── mongodb.html
-│ ├── mysql.html
-│ ├── postgresql.html
-│ ├── redis.html
-│ ├── supabase.html
-│ └── videos.html
+├── index.html                    # Главная страница
+├── pages/                        # Остальные страницы
+│   ├── about.html
+│   ├── comparison.html
+│   ├── contact.html
+│   ├── mongodb.html
+│   ├── mysql.html
+│   ├── postgresql.html
+│   ├── redis.html
+│   ├── supabase.html
+│   └── videos.html
 ├── assets/
-│ ├── css/
-│ │ ├── styles-min.css # Минифицированный общий CSS (Chota + кастомные стили)
-│ │ └── chota.css # Исходный фреймворк (не подключён, для ознакомления)
-│ └── img/ # Изображения (включая WebP и PNG)
-├── components/ # Веб-компоненты
-│ ├── app-navbar.js / app-navbar-min.js
-│ ├── app-footer.js / app-footer-min.js
-│ ├── app-modal.js / app-modal-min.js
-│ ├── contact-form.js / contact-form-min.js
-│ ├── info-card.js / info-card-min.js
-│ └── sidebar-content.js / sidebar-content-min.js
+│   ├── css/
+│   │   ├── styles-min.css        # Минифицированный общий CSS (Chota + кастомные стили)
+│   │   └── chota.css             # Исходный фреймворк (не подключён, для ознакомления)
+│   └── img/                      # Изображения (включая WebP и PNG)
+├── components/                   # Веб-компоненты
+│   ├── app-navbar.js / app-navbar-min.js
+│   ├── app-footer.js / app-footer-min.js
+│   ├── app-modal.js / app-modal-min.js
+│   ├── contact-form.js / contact-form-min.js
+│   ├── info-card.js / info-card-min.js
+│   └── sidebar-content.js / sidebar-content-min.js
 └── README.md
+```
