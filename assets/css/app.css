@@ -413,6 +413,7 @@ a:hover {
 article img {
   max-width: 100%;
   height: auto;
+  aspect-ratio: var(--img-ratio, auto);
   display: block;
 }
 
