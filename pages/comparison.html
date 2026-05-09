@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Сравнение баз данных: PostgreSQL, MySQL, MongoDB, Redis, Supabase">
+  <title>Сравнение баз данных | DB for WebDev</title>
+  <link rel="preload" href="../assets/css/styles-min.css" as="style">
+  <link rel="stylesheet" href="../assets/css/styles-min.css">
+  <script src="../components/app-navbar-min.js" defer></script>
+  <script src="../components/app-footer-min.js" defer></script>
+  <script src="../components/contact-form-min.js" defer></script>
+  <script src="../components/sidebar-content-min.js" defer></script>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+    })();
+  </script>
+</head>
+<body>
+  <site-header current-page="comparison"></site-header>
+
+  <main>
+    <h1 style="text-align:center; margin-top:0;">Сравнительная таблица</h1>
+    <div class="container">
+      <div class="card" style="padding: 2rem; overflow-x: auto;">
+        <table class="striped" style="font-size: 0.95rem;">
+          <caption style="font-weight: 600; margin-bottom: 0.5rem; caption-side: top; text-align: left;">
+            Основные характеристики популярных СУБД
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Характеристика</th>
+              <th scope="col">PostgreSQL</th>
+              <th scope="col">MySQL</th>
+              <th scope="col">MongoDB</th>
+              <th scope="col">Redis</th>
+              <th scope="col">Supabase</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Тип</td>
+              <td>Реляционная</td>
+              <td>Реляционная</td>
+              <td>Документная (NoSQL)</td>
+              <td>Ключ-значение</td>
+              <td>Облачная (PostgreSQL)</td>
+            </tr>
+            <tr>
+              <td>Язык запросов</td>
+              <td>SQL (расширенный)</td>
+              <td>SQL (стандартный)</td>
+              <td>MQL (JSON-подобный)</td>
+              <td>Собственные команды</td>
+              <td>SQL</td>
+            </tr>
+            <tr>
+              <td>Транзакции ACID</td>
+              <td>Да</td>
+              <td>Да (с InnoDB)</td>
+              <td>Частично (с версии 4.0)</td>
+              <td>Нет</td>
+              <td>Да</td>
+            </tr>
+            <tr>
+              <td>Масштабирование</td>
+              <td>Вертикальное и горизонтальное (через репликацию)</td>
+              <td>В основном вертикальное, репликация</td>
+              <td>Горизонтальное (шардирование)</td>
+              <td>Кластеризация, шардирование</td>
+              <td>Автоматическое в облаке</td>
+            </tr>
+            <tr>
+              <td>Типичные сценарии</td>
+              <td>Сложные транзакции, аналитика</td>
+              <td>Классический веб (CMS, магазины)</td>
+              <td>Гибкий JSON, каталоги, IoT</td>
+              <td>Кэш, сессии, очереди</td>
+              <td>Современные веб-приложения, API</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <aside class="sidebar" aria-label="Навигация по базам данных">
+    <sidebar-content current-page="comparison"></sidebar-content>
+    <div class="container sidebar-bottom">
+      <subscribe-form></subscribe-form>
+    </div>
+  </aside>
+
+  <site-footer></site-footer>
+</body>
+</html>

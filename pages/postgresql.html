@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PostgreSQL — мощная реляционная СУБД с открытым кодом">
+  <title>PostgreSQL | DB for WebDev</title>
+  <link rel="preload" href="../assets/css/styles-min.css" as="style">
+  <link rel="stylesheet" href="../assets/css/styles-min.css">
+  <script src="../components/app-navbar-min.js" defer></script>
+  <script src="../components/app-footer-min.js" defer></script>
+  <script src="../components/contact-form-min.js" defer></script>
+  <script src="../components/sidebar-content-min.js" defer></script>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+    })();
+  </script>
+</head>
+<body>
+  <site-header current-page="postgresql"></site-header>
+
+  <main>
+    <div class="container">
+      <article>
+        <h1>PostgreSQL</h1>
+          <picture>
+            <source srcset="../assets/img/postgresql-logo.webp" type="image/webp">
+            <img src="../assets/img/postgresql-logo.png" alt="Логотип PostgreSQL" fetchpriority="high" width="450">
+          </picture>
+        <p><strong>PostgreSQL</strong> — это объектно-реляционная система управления базами данных с открытым исходным кодом, известная своей надёжностью, производительностью и расширяемостью.</p>
+        <h2>Ключевые возможности</h2>
+        <ul>
+          <li>Полная поддержка ACID-транзакций</li>
+          <li>Сложные типы данных (JSON, массивы, hstore)</li>
+          <li>Репликация и партиционирование</li>
+          <li>Расширяемость через пользовательские функции и индексы</li>
+        </ul>
+        <p>PostgreSQL активно используется в высоконагруженных веб-проектах, аналитических системах и как основа для облачных платформ (например, Supabase).</p>
+      </article>
+    </div>
+  </main>
+
+  <aside class="sidebar" aria-label="Навигация по базам данных">
+    <sidebar-content current-page="postgresql"></sidebar-content>
+    <div class="container sidebar-bottom">
+      <subscribe-form></subscribe-form>
+    </div>
+  </aside>
+
+  <site-footer></site-footer>
+</body>
+</html>

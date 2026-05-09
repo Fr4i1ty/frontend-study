@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MongoDB — документоориентированная NoSQL СУБД">
+  <title>MongoDB | DB for WebDev</title>
+  <link rel="preload" href="../assets/css/styles-min.css" as="style">
+  <link rel="stylesheet" href="../assets/css/styles-min.css">
+  <script src="../components/app-navbar-min.js" defer></script>
+  <script src="../components/app-footer-min.js" defer></script>
+  <script src="../components/contact-form-min.js" defer></script>
+  <script src="../components/sidebar-content-min.js" defer></script>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+    })();
+  </script>
+</head>
+<body>
+  <site-header current-page="mongodb"></site-header>
+
+  <main>
+    <div class="container">
+      <article>
+        <h1>MongoDB</h1>
+        <picture>
+          <source srcset="../assets/img/mongodb-logo.webp" type="image/webp">
+          <img src="../assets/img/mongodb-logo.png" alt="Логотип MongoDB" fetchpriority="high" width="450">
+        </picture>
+        <p><strong>MongoDB</strong> — документоориентированная NoSQL база данных, хранящая данные в формате BSON (бинарный JSON). Обеспечивает высокую гибкость схемы и масштабируемость.</p>
+        <h2>Сильные стороны</h2>
+        <ul>
+          <li>Гибкая модель данных без жёсткой схемы</li>
+          <li>Встроенная поддержка шардирования</li>
+          <li>Мощный язык запросов MQL</li>
+          <li>Облачный сервис MongoDB Atlas</li>
+        </ul>
+        <p>Идеально подходит для хранения неструктурированных данных, каталогов товаров, логов и IoT-решений.</p>
+      </article>
+    </div>
+  </main>
+
+  <aside class="sidebar" aria-label="Навигация по базам данных">
+    <sidebar-content current-page="mongodb"></sidebar-content>
+    <div class="container sidebar-bottom">
+      <subscribe-form></subscribe-form>
+    </div>
+  </aside>
+
+  <site-footer></site-footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Обзор баз данных для веб-разработки: PostgreSQL, MySQL, MongoDB, Redis, Supabase">
+  <title>Базы данных для веба | DB for WebDev</title>
+
+  <link rel="preload" href="assets/css/styles-min.css" as="style">
+  <link rel="stylesheet" href="assets/css/styles-min.css">
+
+  <script src="components/app-navbar-min.js" defer></script>
+  <script src="components/app-footer-min.js" defer></script>
+  <script src="components/info-card-min.js" defer></script>
+  <script src="components/contact-form-min.js" defer></script>
+  <script src="components/sidebar-content-min.js" defer></script>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+    })();
+  </script>
+</head>
+<body>
+  <site-header current-page="home"></site-header>
+
+  <main>
+    <section class="hero" style="text-align:center; padding: var(--spacing-lg) 1rem;">
+      <h1>Базы данных в веб-разработке</h1>
+      <p style="font-size:1.1rem; color:var(--color-text-light); max-width:700px; margin:0 auto;">
+        Сравнение и разбор PostgreSQL, MySQL, MongoDB, Redis и Supabase.
+        Выберите правильный инструмент для вашего проекта.
+      </p>
+    </section>
+
+    <section class="databases-grid">
+      <div class="container">
+        <h2 style="text-align:center;">Обзор технологий</h2>
+        <div class="grid">
+          <db-card
+            data-name="PostgreSQL"
+            data-logo-webp="assets/img/postgresql-logo.webp"
+            data-logo-fallback="assets/img/postgresql-logo.png"
+            data-link="pages/postgresql.html">
+            <span slot="description">Реляционная СУБД с открытым исходным кодом, мощная и расширяемая.</span>
+          </db-card>
+
+          <db-card
+            data-name="MySQL"
+            data-logo-webp="assets/img/mysql-logo.webp"
+            data-logo-fallback="assets/img/mysql-logo.png"
+            data-link="pages/mysql.html">
+            <span slot="description">Популярная реляционная СУБД, основа множества веб-приложений.</span>
+          </db-card>
+
+          <db-card
+            data-name="MongoDB"
+            data-logo-webp="assets/img/mongodb-logo.webp"
+            data-logo-fallback="assets/img/mongodb-logo.png"
+            data-link="pages/mongodb.html">
+            <span slot="description">Документоориентированная NoSQL СУБД для гибких структур данных.</span>
+          </db-card>
+
+          <db-card
+            data-name="Redis"
+            data-logo-webp="assets/img/redis-logo.webp"
+            data-logo-fallback="assets/img/redis-logo.png"
+            data-link="pages/redis.html">
+            <span slot="description">В памяти хранящееся хранилище структур данных для кэширования и очередей.</span>
+          </db-card>
+
+          <db-card
+            data-name="Supabase"
+            data-logo-webp="assets/img/supabase-logo.webp"
+            data-logo-fallback="assets/img/supabase-logo.png"
+            data-link="pages/supabase.html">
+            <span slot="description">Облачная платформа на основе PostgreSQL с API и аутентификацией.</span>
+          </db-card>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="sidebar" aria-label="Навигация по базам данных">
+    <sidebar-content></sidebar-content>
+    <div class="container sidebar-bottom">
+      <subscribe-form></subscribe-form>
+    </div>
+  </aside>
+
+  <site-footer></site-footer>
+</body>
+</html>
