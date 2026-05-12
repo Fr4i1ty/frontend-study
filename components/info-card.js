@@ -66,7 +66,6 @@ class DbCard extends HTMLElement {
           height: 100%;
           object-fit: contain;
         }
-        /* Инверсия логотипа в тёмной теме */
         :host-context([data-theme="dark"]) picture img {
           filter: invert(1) hue-rotate(180deg);
         }
